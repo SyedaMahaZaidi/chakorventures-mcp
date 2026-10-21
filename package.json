@@ -1,12 +1,11 @@
-
 {
   "name": "chakorventures-mcp",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Official Chakor Ventures MCP server",
   "main": "index.js",
   "type": "module",
   "bin": {
-    "chakorventures-mcp": "./index.js"
+    "chakorventures-mcp": "index.js"
   },
   "mcpName": "io.github.SyedaMahaZaidi/chakorventures-mcp",
   "scripts": {
