@@ -1,55 +1,139 @@
-# Chakor Ventures MCP Server
+# Chakor Ventures MCP
 
-**Official Model Context Protocol (MCP) integration for Chakor Ventures**
+**Pakistan Real Estate, Property Investment & Financial Utilities for AI Assistants**
 
-Chakor Ventures is a real estate company based in Pakistan. This MCP server is designed to help compatible AI assistants access approved company information and, as development progresses, publicly available real estate project information.
+Chakor Ventures MCP is a Model Context Protocol (MCP) server providing reusable tools for property calculations, financial analysis, construction cost estimation, postal-code lookup, and publicly available real estate information in Pakistan.
 
-## Current Features
+Developed by [Chakor Ventures](https://chakorventures.com/), the project is designed for homebuyers, property investors, real estate professionals, construction planners, developers, and compatible AI applications.
 
-- Retrieve basic company information using the `get_company_info` tool.
-- Connect to compatible MCP clients using the standard input/output (stdio) transport.
+## Features
 
-## Planned Features
+The server provides reusable utilities that can be applied independently of Chakor Ventures' own properties or developments.
 
-- Explore Chakor Ventures real estate projects.
-- Access published property and development updates.
-- Retrieve publicly available news and blog articles.
-- Connect to the Chakor Ventures WordPress website.
+### Real Estate & Financial Utilities
+
+The following seven utilities have been implemented in the development version and are being prepared for the next public release.
+
+| MCP Tool | Function |
+|---|---|
+| `convert_area_units` | Convert Marla, Kanal, square feet, square yards, and acres with custom Marla sizes. |
+| `convert_number_system` | Convert between ones, thousands, lakh, crore, million, and billion. |
+| `calculate_property_roi` | Estimate compounded investment growth, nominal ROI, and inflation-adjusted ROI. |
+| `estimate_construction_cost` | Estimate construction expenses using covered area, material rates, labour rates, and contingency. |
+| `lookup_pakistan_postal_code` | Search Pakistan postal codes by city and locality using a compiled JSON dataset. |
+| `estimate_property_tax` | Calculate illustrative property purchase, sale, and capital gains taxes using supplied tax rates. |
+| `estimate_income_tax` | Estimate Pakistan salaried income tax using selected FY 2025–26 or FY 2026–27 rules. |
+
+### Company & Website Information
+
+These tools are available in the published v1.0.2 package.
+
+| MCP Tool | Function |
+|---|---|
+| `get_company_info` | Retrieve basic Chakor Ventures company information. |
+| `get_latest_news` | Retrieve recent publicly available articles from the Chakor Ventures WordPress website. |
+| `get_chakor_mcp_page` | Retrieve information published on the official Chakor Ventures MCP webpage. |
+| `search_chakor_website` | Search public articles, pages, and available inventory through WordPress search. |
+
+## Example Use Cases
+
+Compatible AI assistants can use these tools to help answer questions such as:
+
+- How many square feet are in 20 Marla using a 225-square-foot Marla?
+- Convert PKR 14 crore into millions.
+- What is the estimated five-year growth of a PKR 10 million investment at an assumed annual return of 12%?
+- Estimate construction costs for a 2,000-square-foot house using specified material and labour rates.
+- Find the postal code for a locality in Pakistan.
+- Calculate an illustrative property transfer tax at a supplied rate.
+- Estimate annual and monthly salaried income tax for a selected tax year.
 
 ## Installation
 
-**Requirements:** Node.js and a compatible MCP client.
+**Requirements**
 
-Install the published package:
+- Node.js
+- npm
+- An MCP-compatible client that supports stdio servers
+
+The currently published npm package is version `1.0.2`. It contains the four company and WordPress information tools. The seven additional utilities will become publicly available after the next release.
+
+Install the current published package:
 
 ```bash
-npm install -g chakorventures-mcp
+npm install -g chakorventures-mcp@1.0.2
 ```
 
-The server uses the stdio transport and must be launched by an MCP-compatible client.
+Launch the server:
 
-## Official Links
+```bash
+chakorventures-mcp
+```
 
-**Website:** https://chakorventures.com/
+The server uses the Model Context Protocol standard input/output (stdio) transport.
 
-**MCP Documentation:** https://chakorventures.com/mcp/
+## Example MCP Client Configuration
 
-**npm Package:** https://www.npmjs.com/package/chakorventures-mcp
+For Windows, after globally installing the package:
 
-**GitHub Repository:** https://github.com/SyedaMahaZaidi/chakorventures-mcp
+```json
+{
+  "mcpServers": {
+    "chakorventures": {
+      "command": "chakorventures-mcp.cmd",
+      "args": []
+    }
+  }
+}
+```
 
-## MCP Registry
+This example applies to MCP clients supporting the `mcpServers` configuration format. Configuration locations and formats differ between clients.
 
-**Registry Server Name:** `io.github.SyedaMahaZaidi/chakorventures-mcp`
+After connecting, the client can discover and execute the tools exposed by the installed server version.
 
-**Published Version:** `1.0.1`
+## Technical Architecture
 
-This server is published in the official Model Context Protocol Registry.
+- **Runtime:** Node.js
+- **Protocol:** Model Context Protocol
+- **SDK:** `@modelcontextprotocol/sdk`
+- **Transport:** stdio
+- **Input validation:** Zod
+- **Content retrieval:** WordPress REST API
+- **Postal-code source:** JSON dataset compiled from Chakor Ventures' published CSV
+
+The general-purpose calculation tools run locally in the MCP server. WordPress-backed tools retrieve public content over HTTPS.
+
+## Data Sources & Accuracy
+
+The server uses a combination of calculation formulas, user-supplied inputs, a compiled postal-code dataset, and publicly available WordPress content.
+
+Construction cost estimates use rates supplied by the user and are not live contractor quotations.
+
+ROI projections assume the compounding methodology described by the tool and do not automatically account for all property ownership costs.
+
+Property tax and income tax functionality is intended for informational estimates. Applicable laws, rates, taxpayer classifications, exemptions, and assessment rules must be verified against official tax sources before relying on results.
+
+Postal-code coverage depends on the imported dataset, which may be incomplete or require updates.
+
+## Official Website & Resources
+
+- **Chakor Ventures:** https://chakorventures.com/
+- **MCP Information:** https://chakorventures.com/mcp/
+- **npm Package:** https://www.npmjs.com/package/chakorventures-mcp
+- **MCP Registry:** https://registry.modelcontextprotocol.io/v0.1/servers?search=chakorventures-mcp
+- **GitHub Repository:** https://github.com/SyedaMahaZaidi/chakorventures-mcp
 
 ## Development Status
 
-This is the initial version of the Chakor Ventures MCP server. Additional tools and WordPress integration are under development.
+The published release is v1.0.2.
 
----
+An expanded development version includes seven additional general-purpose utilities. These are being tested and documented before a new npm and MCP Registry release.
 
-© Chakor Ventures. All rights reserved.
+## License
+
+A license file will be added after approval of the project's open-source licensing terms by Chakor Ventures.
+
+## Disclaimer
+
+This software provides information and illustrative calculations. It does not constitute financial, tax, legal, construction, or investment advice. Users should verify important decisions against official sources and qualified professionals.
+
+Copyright © Chakor Ventures.
