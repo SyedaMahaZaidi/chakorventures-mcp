@@ -5,7 +5,7 @@
     "title": "Chakor Ventures",
     "description": "Access public information about Chakor Ventures through MCP.",
     "websiteUrl": "https://chakorventures.com/mcp/",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "repository": {
       "url": "https://github.com/SyedaMahaZaidi/chakorventures-mcp",
       "source": "github"
@@ -14,7 +14,7 @@
       {
         "registryType": "npm",
         "identifier": "chakorventures-mcp",
-        "version": "1.0.2",
+        "version": "1.0.3",
         "transport": {
           "type": "stdio"
         }
