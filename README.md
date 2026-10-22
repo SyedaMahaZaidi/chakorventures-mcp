@@ -130,7 +130,8 @@ An expanded development version includes seven additional general-purpose utilit
 
 ## License
 
-A license file will be added after approval of the project's open-source licensing terms by Chakor Ventures.
+This project is licensed under the MIT License.
+See the [LICENSE](LICENSE) file for details.
 
 ## Disclaimer
 
