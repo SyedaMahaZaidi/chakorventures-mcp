@@ -1,6 +1,6 @@
 {
   "name": "chakorventures-mcp",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "Official Chakor Ventures MCP server",
   "main": "index.js",
   "type": "module",
@@ -11,7 +11,7 @@
   "scripts": {
     "start": "node index.js"
   },
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.32.1",
     "html-to-text": "^10.0.1",

@@ -1,24 +1,23 @@
 
 {
-    "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-    "name": "io.github.SyedaMahaZaidi/chakorventures-mcp",
-    "title": "Chakor Ventures",
-    "description": "Access public information about Chakor Ventures through MCP.",
-    "websiteUrl": "https://chakorventures.com/mcp/",
-    "version": "1.0.3",
-    "repository": {
-      "url": "https://github.com/SyedaMahaZaidi/chakorventures-mcp",
-      "source": "github"
-    },
-    "packages": [
-      {
-        "registryType": "npm",
-        "identifier": "chakorventures-mcp",
-        "version": "1.0.3",
-        "transport": {
-          "type": "stdio"
-        }
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.SyedaMahaZaidi/chakorventures-mcp",
+  "title": "Chakor Ventures",
+  "description": "Official Chakor Ventures MCP server for real estate, property taxes and construction calculators.",
+  "websiteUrl": "https://chakorventures.com/mcp/",
+  "version": "1.0.4",
+  "repository": {
+    "url": "https://github.com/SyedaMahaZaidi/chakorventures-mcp",
+    "source": "github"
+  },
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "chakorventures-mcp",
+      "version": "1.0.4",
+      "transport": {
+        "type": "stdio"
       }
-    ]
-  }
-  
+    }
+  ]
+}
