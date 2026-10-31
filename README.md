@@ -598,3 +598,15 @@ All results depend on the inputs, reference data, and calculation methodologies 
 Users are responsible for independently verifying critical information before making financial, legal, investment, tax, property, or construction decisions.
 
 Chakor Ventures does not guarantee the accuracy, completeness, or suitability of estimates for a particular transaction or project.
+
+
+# Chakor Ventures MCP
+
+**Pakistan Real Estate, Property Investment & Financial Utilities for AI Assistants**
+
+[![npm](https://img.shields.io/npm/v/chakorventures-mcp)](https://www.npmjs.com/package/chakorventures-mcp)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![MCP](https://img.shields.io/badge/Protocol-MCP-blue)](https://modelcontextprotocol.io)
+
+[![Chakor Ventures MCP server](https://mcprush.com/badge/chakor-ventures-mcp/card.svg)](https://mcprush.com/to/chakor-ventures-mcp?ref=badge)
+
