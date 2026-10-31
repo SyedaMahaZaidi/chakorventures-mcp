@@ -600,6 +600,7 @@ Users are responsible for independently verifying critical information before ma
 Chakor Ventures does not guarantee the accuracy, completeness, or suitability of estimates for a particular transaction or project.
 
 
+
 # Chakor Ventures MCP
 
 **Pakistan Real Estate, Property Investment & Financial Utilities for AI Assistants**
@@ -609,4 +610,5 @@ Chakor Ventures does not guarantee the accuracy, completeness, or suitability of
 [![MCP](https://img.shields.io/badge/Protocol-MCP-blue)](https://modelcontextprotocol.io)
 
 [![Chakor Ventures MCP server](https://mcprush.com/badge/chakor-ventures-mcp/card.svg)](https://mcprush.com/to/chakor-ventures-mcp?ref=badge)
+
 
